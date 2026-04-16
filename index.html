@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korean Content Idea Maker</title>
+</head>
+<body>
+    <h1>Korean Content Idea Maker</h1>
+    <p>환영합니다! 이 도구는 창의적인 콘텐츠 아이디어를 생성합니다.</p>
+    <button onclick="generateIdea()">아이디어 만들기</button>
+    <h2>아이디어:</h2>
+    <p id="ideaDisplay"></p>
+    <script>
+        const ideas = [
+            'K-드라마 추천 목록', 
+            '한국 전통 음식 레시피', 
+            '한국의 여행지 소개', 
+            'K-Pop 아티스트 인터뷰', 
+            '한국 역사에 관한 이야기'
+        ];
+
+        function generateIdea() {
+            const randomIndex = Math.floor(Math.random() * ideas.length);
+            document.getElementById('ideaDisplay').innerText = ideas[randomIndex];
+        }
+    </script>
+</body>
+</html>
